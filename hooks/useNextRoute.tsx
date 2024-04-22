@@ -1,12 +1,12 @@
-'use client';
-import { useRouter } from 'next/navigation';
+'use client'
+import { useRouter } from 'next/navigation'
 
 export default function useNextRoute() {
-    const router = useRouter();
+  const router = useRouter()
 
-    const navigateToPage = (page:string) => {
-        router.push(page);
-    }
+  const navigateToPage = (page: string) => {
+    router.push(page)
+  }
 
-    return {navigateToPage};
+  return { navigateToPage }
 }

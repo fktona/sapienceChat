@@ -1,19 +1,18 @@
 'use client'
-import { useState } from 'react';
+import { useState } from 'react'
 
 const useToggle = () => {
-    const [toggleMenu, setToggleMenu] = useState(false);
+  const [toggleMenu, setToggleMenu] = useState(false)
 
-    const toggle = () => {
-        setToggleMenu(prev => !prev);
-        console.log(toggleMenu)
-    };
+  const toggle = () => {
+    setToggleMenu((prev) => !prev)
+    console.log(toggleMenu)
+  }
 
+  return {
+    toggleMenu,
+    toggle,
+  }
+}
 
-    return {
-        toggleMenu,
-        toggle
-    };
-};
-
-export default useToggle;
+export default useToggle

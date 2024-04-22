@@ -1,27 +1,29 @@
-import * as React from 'react';
-import Table from '@mui/material/Table';
-import TableBody from '@mui/material/TableBody';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableHead from '@mui/material/TableHead';
-import TableRow from '@mui/material/TableRow';
-import Button from './button';
-import Paper from '@mui/material/Paper';
-import SyncAltIcon from '@mui/icons-material/SyncAlt';
+import * as React from 'react'
+import Table from '@mui/material/Table'
+import TableBody from '@mui/material/TableBody'
+import TableCell from '@mui/material/TableCell'
+import TableContainer from '@mui/material/TableContainer'
+import TableHead from '@mui/material/TableHead'
+import TableRow from '@mui/material/TableRow'
+import Button from './button'
+import Paper from '@mui/material/Paper'
+import SyncAltIcon from '@mui/icons-material/SyncAlt'
 
 function createData(
-    name: string,
-    link: string,
-    ID: number,
-    visits: number,
-    button: () => JSX.Element,
+  name: string,
+  link: string,
+  ID: number,
+  visits: number,
+  button: () => JSX.Element,
 ) {
-    return { name, link, ID, visits, button};
+  return { name, link, ID, visits, button }
 }
 
 const rows = [
-    createData( 'Send spear', 'link', 6567, 24, () => <Button icons={<SyncAltIcon />}>update</Button>),
-];
+  createData('Send spear', 'link', 6567, 24, () => (
+    <Button icons={<SyncAltIcon />}>update</Button>
+  )),
+]
 
 export default function AiTable() {
   return (
@@ -54,5 +56,5 @@ export default function AiTable() {
         </TableBody>
       </Table>
     </TableContainer>
-  );
+  )
 }
