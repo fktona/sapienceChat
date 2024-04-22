@@ -10,7 +10,7 @@ import Identity from "@/assets/identity";
 import Button from "./button";
 import LogoutIcon from '@mui/icons-material/Logout';
 import {MenuToggle} from "@/context/menuContext";
-import logoBlack from '@/assets/logo/logotransparent.png'
+import logoBlack from '@/assets/Logo/logotransparent.png'
 import Link from "next/link";
 export default function Sidebar() {
   
