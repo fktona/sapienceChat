@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logoBlack from '@/assets/logo/logotransparent.png'
+import logoBlack from '@/assets/Logo/logotransparent.png'
 import Identity from '@/assets/identity'
 
 export default function AuthorizationContainer({children}:{children:React.ReactNode}) {

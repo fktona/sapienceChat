@@ -1,9 +1,6 @@
 import React from 'react'
 import { TextField } from '@mui/material'
 import Link from 'next/link'
-import Image from 'next/image'
-import logoBlack from '@/assets/Logo/logotransparent.png'
-import {Checkbox} from '@mui/material'
 import AuthorizationContainer from '@/components/authotization'
 
 
