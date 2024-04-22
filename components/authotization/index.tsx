@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import logoBlack from '@/assets/logo/logotransparent.png'
 import Identity from '@/assets/identity'
-import { baseUrl } from "@/constants/baseUrl";
 
 export default function AuthorizationContainer({children}:{children:React.ReactNode}) {
 

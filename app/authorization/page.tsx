@@ -2,19 +2,14 @@
 import React, { use, useEffect, useState } from 'react'
 import { TextField } from '@mui/material'
 import Link from 'next/link'
-import Image from 'next/image'
-import logoBlack from '@/assets/logo/logotransparent.png'
 import {Checkbox} from '@mui/material'
 import AuthorizationContainer from '@/components/authotization'
 import { AuthFunction } from '@/libs/authorization';
 import Fuctions from '@/libs/utils'
 import { AuthState } from '@/types'
-import { baseUrl } from "@/constants/baseUrl";
-import { useMutation } from '@tanstack/react-query'
-import axios from 'axios'
 import { useAuth } from '@/context/Auth/authinfo'
 
-import { useRouter } from 'next/navigation'
+
 type AuthRequest = Pick<AuthState, 'email' | 'password'>;
 
 
