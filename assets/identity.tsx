@@ -1,6 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import logoBlack from './logotransparent.png'
+import logoBlack from './Logo/logotransparent.png'
 
 export default function Identity() {
   return (
