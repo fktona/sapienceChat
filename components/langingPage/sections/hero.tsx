@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="bg-landing-bg text-start pb-8 relative
-    h-full py-4  lg:text-[25px] px-[22px]   overflow-hidden text-[18px]'>
+    h-full py-4  lg:text-[25px] px-[22px] lg:px-[55px]  overflow-hidden text-[18px]'>
       ">
         <Nav /> 
 
@@ -25,10 +25,10 @@ export default function Hero() {
 
         
     </div>
-    <div className=" left-0  absolute w-full max-h-[100vh] overflow-hidden top-0 flex  flex-wrap gap-2 ">
+    <div className=" left-0  absolute w-full h-full p-0 overflow-hidden top-0 flex   flex-wrap gap-2 ">
             {
                 Array(10000).fill(0).map((_, i) => (
-                    <div key={i} className={`w-[1px] h-[1px] bg-white/15  relative top-0 left-0  
+                    <div key={i} className={`w-[1px] h-[1px] bg-white/15  relative top-0 left-0  animate-ping
                     rounded-full`} style={{animationDelay: `${i * 0.5}s`}}></div>
                 ))
 

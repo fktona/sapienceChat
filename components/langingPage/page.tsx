@@ -7,14 +7,16 @@ import Footer from "./sections/footer"
 
 export default function LandingPage() {
   return (
-    <main className="md:px-[55px] px-[22px] top-0 text-white  
+    <main className=" top-0 text-white  
     absolute w-full left-0  bg-landing-bg">
         <Hero />
+        <div className="md:px-[55px] px-[22px]">
         <Purpose />
         <Impact/>
         <Reason/>
         <Assistants/>
         <Footer/>
+        </div>
     </main>
   )
 }
