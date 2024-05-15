@@ -1,6 +1,7 @@
 import Nav from "../components/nav";
 import Button from "../components/button";
 import Image from "next/image";
+import { width } from "@mui/system";
 
 export default function Hero() {
   return (
@@ -28,8 +29,8 @@ export default function Hero() {
     <div className=" left-0  absolute w-full h-full p-0 overflow-hidden top-0 flex   flex-wrap gap-2 ">
             {
                 Array(10000).fill(0).map((_, i) => (
-                    <div key={i} className={`w-[1px] h-[1px] bg-white/15  relative top-0 left-0  animate-ping
-                    rounded-full`} style={{animationDelay: `${i * 0.5}s`}}></div>
+                    <div key={i} className={`w-[1px] h-[1px] bg-white/15  relative top-0 left-0 
+                    rounded-full`} style={{animationDelay: `${i * 0.5}s ` } }></div>
                 ))
 
             }
