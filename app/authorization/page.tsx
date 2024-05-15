@@ -41,7 +41,7 @@ export default function Authorization() {
         name="email"
         value={userData.email}
         sx={{ borderColor: '#97F675' }}
-        id="standard-basic"
+        id="password"
         label="email"
         type="email"
         variant="standard"
@@ -52,7 +52,7 @@ export default function Authorization() {
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           handleInputChange(e, setuserData)
         }
-        id="standard-basic"
+        id="password"
         label="password"
         type="password"
         value={userData.password}

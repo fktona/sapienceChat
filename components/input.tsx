@@ -18,9 +18,9 @@ const InputField: React.FC<InputFieldProps> = ({
   return (
     <Box
       component="form"
-      sx={{
-        '& > (style)': { m: 1, width: '25ch', height: '50px' },
-      }}
+      // sx={{
+      //   '& > (style)': { m: 1},
+      // }}
       noValidate
       autoComplete="off"
     >
@@ -30,14 +30,12 @@ const InputField: React.FC<InputFieldProps> = ({
         required={required ? true : false}
         //readOnly={readonly ? true : false}
         id={id}
-        sx={{ height: '100%', background: 'silver', p: { x: 2, y: 2 }, m: 3 }}
+        sx={{ height: '100%', p: { x: 2, y: 2 }, m: 3 }}
         label={label}
-        variant={value ? 'filled' : 'outlined'}
+        variant={value ? 'filled' : 'standard'}
         name={name}
         className={
-          !changeStyle
-            ? className
-            : 'border-2 border-gray-300 rounded-md p-2 w-full'
+          !changeStyle ? className : ' border-gray-300 rounded-md p-2 w-full'
         }
         onChange={onChange}
         placeholder={placeholder}

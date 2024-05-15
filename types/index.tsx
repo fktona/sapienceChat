@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { Dispatch, ReactNode } from 'react'
 
 export interface NavLinkProps {
   href: string
@@ -80,4 +80,28 @@ export interface authAction {
     token?: string
     verified?: boolean
   }
+}
+
+export interface UploadProps {
+  name: string,
+  purpose: string,
+  category: string,
+  document: File | null,
+  assistant:string
+}
+
+export interface uploadAction {
+  type: string,
+  payload?: {
+    name?: string,
+    purpose?: string,
+    category?: string,
+    assistant?: string,
+    document?: File | null,
+  }
+}
+
+export interface UploadContextProps {
+  state: UploadProps | null,
+  dispatch: Dispatch<any>
 }

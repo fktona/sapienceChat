@@ -1,7 +1,7 @@
 'use client'
 import { useContext, useState, createContext } from 'react'
 import { ReactNode } from 'react'
-import { MenuProps } from '@/types'
+// import { MenuProps } from '@/types'
 import Navigation from '@/app/navigation/navigation'
 
 const menuContext = createContext<any>(null)

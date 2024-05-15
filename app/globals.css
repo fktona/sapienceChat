@@ -23,8 +23,10 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
-
-/* body {
+html{
+  background-color: #131313;
+}
+body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
       to bottom,
@@ -32,10 +34,48 @@
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
-} */
+}
+
+.leftAnimation {
+  animation: slideInFromLeft 1.3s ease-in-out;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    /* transform: translateX(-100%); */
+    opacity: 0;
+  }
+  100% {
+    /* transform: translateX(0); */
+    opacity: 1;
+  }
+}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.btnclip{
+  clip-path: polygon(85% 0%, 100% 50%, 100% 100%, 0 100%, 0 0);
+}
+
+.imgclip{
+  clip-path: polygon(81% 0%, 100% 13%, 100% 100%, 0 100%, 0 0);
+  position: relative;
+}
+
+
+
+.imgclip::before{
+  content: "";
+  position: absolute;
+  top: 1%;
+  left: 1%;
+  width: 98%;
+  height: 98%;
+  clip-path: polygon(81% 0%, 100% 13%, 100% 100%, 0 100%, 0 0);
+  background-color: #131313;
+  
 }

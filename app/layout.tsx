@@ -31,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="shortcut icon" href="/logoGreen.png" type="image/x-icon" />
-      <body className={`${inter.className} `}>
+      <body className={`${inter.className} relative max-w-[1440px] mx-auto`}>
         <AuthProvider>
           <QueryClientProvider client={queryClient}>
             <MenuProvider>

@@ -46,6 +46,7 @@ const config: Config = {
         'background-white': '#f9f9f9',
         'action-green': '#97F675',
         'gen-white': '#ffffff',
+        'landing-bg':'#131313'
       },
     },
   },

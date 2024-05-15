@@ -7,7 +7,7 @@ export default function Navigation({
   children: React.ReactNode
 }) {
   const segment = useSelectedLayoutSegment()
-  const authorizationPage = segment === 'authorization'
+  const authorizationPage = segment === 'authorization' || segment === null
 
   return <main>{!authorizationPage && children}</main>
 }
