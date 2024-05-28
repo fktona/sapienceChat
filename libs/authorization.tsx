@@ -5,11 +5,13 @@ import { AuthState } from '@/types'
 import { useAuth } from '@/context/Auth/authinfo'
 import { AuthResponse } from '@/types'
 import useNextRoute from '@/hooks/useNextRoute'
+import { useQueryClient } from '@tanstack/react-query'
 import { isError } from 'react-query'
 
 type AuthRequest = Pick<AuthState, 'email' | 'password'>
 
 export const AuthFunction = () => {
+  const queryClient = useQueryClient()
   const { dispatch } = useAuth()
   const { navigateToPage } = useNextRoute()
   const mutation = useMutation<
@@ -31,6 +33,7 @@ export const AuthFunction = () => {
       data: AuthResponse,
       variables: { userData: AuthRequest; type: string; nextRoute?: string },
     ) => {
+      queryClient.invalidateQueries({queryKey:['bots']})
       const { accessToken, _id, email, verified } = data
       dispatch({
         type: variables.type,

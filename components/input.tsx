@@ -32,7 +32,8 @@ const InputField: React.FC<InputFieldProps> = ({
         id={id}
         sx={{ height: '100%', p: { x: 2, y: 2 }, m: 3 }}
         label={label}
-        variant={value ? 'filled' : 'standard'}
+        autoFocus={true}
+        variant={  'standard'}
         name={name}
         className={
           !changeStyle ? className : ' border-gray-300 rounded-md p-2 w-full'

@@ -18,7 +18,7 @@ const NavLink: React.FC<NavLinkProps> = ({ href, children }) => {
       onClick={toggle}
       href={href}
       className={` w-fit px-2 lg:px-0 lg:w-full transition-all 
-    lg:hover:border-[1px] flex text-center  items-center justify-center lg:justify-start
+    lg:hover:border-[1px] flex text-center mb-2 items-center justify-center lg:justify-start
     gap-2 border-action-green lg:text-start lg:rounded-lg rounded-md duration-300 relative lg:pl-6 
      py-2 text-white
     ${isActive ? 'bg-action-green text-black ' : ''}`}

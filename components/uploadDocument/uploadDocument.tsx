@@ -10,10 +10,11 @@ const FileInput = () => {
   const { state, dispatch } = useUpload() as UploadContextProps
   const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event?.target?.files?.[0] || null;
+    console.log(file);
     if (!file || file.type !== 'application/pdf' ) return;
 
     const fileName = file ? file.name : '';
-    dispatch({ type: 'FILE_CHANGE', payload: { file } });
+    dispatch({ type: 'UPLOAD_DOCUMENT', payload: { file } });
     setFileName(fileName);
     console.log(state);  
   };
@@ -22,6 +23,8 @@ const FileInput = () => {
     dispatch({ type: 'FILE_CHANGE', payload: { file: null, fileName: '' } });
     setFileName('');
   }
+
+  
 
   return (
     <div className="flex leftAnimation flex-col gap-1 px-10 items-center justify-center">
@@ -42,7 +45,7 @@ const FileInput = () => {
       <p className="text-gray-700 text-[12px] w-full text-start">
         Supported Format: PDF
       </p>
-      {state?.document && (
+      {fileName != '' && (
         <div className="bg-gray-300 mt-3 flex relative gap-4 w-full p-2">
           <Image alt="" src={'/pdf.jpg'} width={50} height={50} /> {fileName}
           <button onClick={handleFileDelete} className="absolute right-6">

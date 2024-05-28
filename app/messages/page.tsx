@@ -1,6 +1,7 @@
 import React from 'react'
+import withAuth from '@/hooks/withAuth'
 
-export default function pages() {
+const Messages = () =>{
   return (
     <div>
       {' '}
@@ -10,3 +11,5 @@ export default function pages() {
     </div>
   )
 }
+
+export default withAuth(Messages)

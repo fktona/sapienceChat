@@ -55,6 +55,7 @@ export interface ButtonProps {
   children: React.ReactNode
   icons?: React.ReactNode
   onClick?: () => void
+  disabled?:boolean
 }
 
 export interface AuthState {

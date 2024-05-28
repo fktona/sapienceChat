@@ -1,5 +1,9 @@
+'use client'
 import React from 'react'
+import withAuth from '@/hooks/withAuth'
 
-export default function page() {
+const Developer = () => {
   return <div>page</div>
 }
+
+export default withAuth(Developer)

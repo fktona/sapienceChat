@@ -8,6 +8,7 @@ import { AuthFunction } from '@/libs/authorization'
 import Fuctions from '@/libs/utils'
 import { AuthState } from '@/types'
 import { useAuth } from '@/context/Auth/authinfo'
+import Notify from '@/components/authotization/notify'
 
 type AuthRequest = Pick<AuthState, 'email' | 'password'>
 
@@ -34,6 +35,22 @@ export default function Authorization() {
 
   return (
     <AuthorizationContainer>
+      <Notify
+        open={isError}
+        onClose={() => mutation.reset()}
+        severity="error"
+        autoHideDuration={5000}
+      >
+        {error?.response?.data.message || error?.message}
+      </Notify>
+      <Notify
+        open={isSuccess}
+        onClose={() => mutation.reset()}
+        severity="success"
+        autoHideDuration={5000} 
+      >
+        {data?.message}
+      </Notify>
       <TextField
         onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
           handleInputChange(e, setuserData)

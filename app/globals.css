@@ -23,17 +23,9 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
-html{
-  background-color: #131313;
-}
+
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    background-color: black;
 }
 
 .leftAnimation {
@@ -78,4 +70,39 @@ body {
   clip-path: polygon(81% 0%, 100% 13%, 100% 100%, 0 100%, 0 0);
   background-color: #131313;
   
+}
+.robot{
+  perspective: 1000px;
+  position: relative;
+  z-index: 500;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg);
+    filter: hue-rotate(0deg); }
+  100% { transform: rotate(360deg);
+    filter: hue-rotate(180deg); }
+}
+
+.animate-spin {
+  animation: spin 30s linear infinite;
+}
+
+/* This will affect the entire document */
+::-webkit-scrollbar {
+  width: 10px; /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background:#131313; /* color of the tracking area */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888; /* color of the scroll thumb */
+  border-radius: 20px; /* roundness of the scroll thumb */
+  border: 3px solid #131313; /* creates padding around scroll thumb */
+  height: 10px; /* size of the scroll thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; /* color of the scroll thumb on hover */
 }

@@ -10,10 +10,13 @@ import Identity from '@/assets/identity'
 import Button from './button'
 import LogoutIcon from '@mui/icons-material/Logout'
 import { MenuToggle } from '@/context/menuContext'
+import { useAuth } from '@/context/Auth/authinfo'
 import logoBlack from '@/assets/Logo/logotransparent.png'
 import Link from 'next/link'
-export default function Sidebar() {
+import withAuth from '@/hooks/withAuth'
+const Sidebar = () => {
   const { toggle, toggleMenu } = MenuToggle()
+  const {dispatch} = useAuth()
   return (
     <nav
       className={`fixed top-0 z-[100] min-h-[100%] 
@@ -56,10 +59,15 @@ export default function Sidebar() {
         href="/authorization"
         className="absolute bottom-16 md:w-full w-[70%] flex justify-center items-center gap-2 md:left-0"
       >
-        <Button icons={<LogoutIcon />}>
+        <Button icons={<LogoutIcon />}
+         onClick={() => dispatch({
+          type: 'LOGOUT'
+         })}>
           <span className="hidden lg:block">Logout</span>
         </Button>
       </Link>
     </nav>
   )
 }
+
+export default Sidebar

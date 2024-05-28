@@ -17,7 +17,14 @@ export const AuthReducer = (state: any, action: authAction) => {
         verified: payload?.verified,
       }
     case 'LOGOUT':
-    // ...
+      localStorage.removeItem('token')
+      return {
+        ...state,
+        userId: null,
+        email: null,
+        token: null,
+        verified: false,
+      }
   
   default:
   return state;

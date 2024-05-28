@@ -7,7 +7,7 @@ export default function Purpose() {
    <div className="flex justify-between flex-col gap-5 lg:flex-row">
      <div className="lg:space-y-4 space-y-7">
         <p className='lg:text-[15px] text-[12px] mb-2   bg-[#2a2a2a] py-2 rounded-[70px] text-center'>Impact of name on business</p>
-        <p className="text-[30px] font-bold text-white">THE AI FUTURE IS HERE</p>
+        <p className="text-[30px] font-bold text-white">GROW YOUR BUSINESS WITH </p>
         </div>
         <p className='text-[20px] lg:max-w-[50%] text-white/75  '>Lorem ipsum dolor
         

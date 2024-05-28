@@ -1,5 +1,8 @@
 import React from 'react'
+import withAuth from '@/hooks/withAuth'
 
-export default function page() {
+const Analytics =()=> {
   return <div>page</div>
 }
+
+export default withAuth(Analytics)

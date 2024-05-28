@@ -2,7 +2,6 @@
 import { useContext, useState, createContext } from 'react'
 import { ReactNode } from 'react'
 // import { MenuProps } from '@/types'
-import Navigation from '@/app/navigation/navigation'
 
 const menuContext = createContext<any>(null)
 
@@ -15,7 +14,7 @@ const MenuProvider = ({ children }: { children: ReactNode }) => {
   }
   return (
     <menuContext.Provider value={{ toggleMenu, toggle }}>
-      <Navigation>{children}</Navigation>
+    {children}
     </menuContext.Provider>
   )
 }

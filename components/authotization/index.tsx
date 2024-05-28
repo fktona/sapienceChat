@@ -2,6 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import logoBlack from '@/assets/Logo/logotransparent.png'
 import Identity from '@/assets/identity'
+import MainLoading from '../mainLoading'
 
 export default function AuthorizationContainer({
   children,
@@ -9,7 +10,8 @@ export default function AuthorizationContainer({
   children: React.ReactNode
 }) {
   return (
-    <div className="  bg-background-white md:bg-action-green absolute w-[100%] left-0 min-h-full lg:px-24  py-[3rem] ">
+    <div className="  bg-background-white md:bg-action-green absolute w-[100%] left-0 min-h-[100vh]
+    lg:px-24  py-[3rem] ">
       <div className="absolute md:hidden w-full top-0 flex justify-start bg-black z-50  p-2">
         <Identity />
       </div>

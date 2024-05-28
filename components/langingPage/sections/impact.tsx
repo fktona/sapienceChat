@@ -8,7 +8,7 @@ Impact() {
   <div className="flex justify-between lg:flex-row flex-col gap-[30px]">
     <div className="lg:space-y-4 space-y-7 lg:max-w-[30%]">
        <p className='text-[15px] mb-2  bg-[#2a2a2a] py-2 rounded-[70px] text-center'>Impact of name on business</p>
-       <p className="text-[30px] font-bold text-white">AI FOR BUSINESS FOR GROWTH AND ALL</p>
+       <p className="text-[30px] font-bold text-white">AI FOR BUSINESS F</p>
        </div>
        <div className='lg:space-y-6 space-y-8 lg:max-w-[50%]'>
        <p className='text-[20px]  text-white/75  '>Lorem ipsum dolor

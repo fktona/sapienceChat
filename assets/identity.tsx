@@ -9,7 +9,7 @@ export default function Identity() {
       <p
         className={` text-action-green md:hidden block lg:block text-sm  font-extrabold`}
       >
-        SapienceChat
+        AXIOM
       </p>
     </div>
   )
